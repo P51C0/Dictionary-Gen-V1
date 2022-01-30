@@ -15,9 +15,9 @@ upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 lower = 'abcdefghijklmnopqrstuvwxyz'
 num = '1234567890'
 signos = '?-,.=!"·$%&/)('
-total = upper + lower + num + signos
+total = upper + num + lower + signos
      
-def get_passwd(len_passw=(10)):
+def get_passwd(len_passw=(16)):
         passwd = ''
         for i in range(len_passw):
             text = random.choice(total)
@@ -26,5 +26,4 @@ def get_passwd(len_passw=(10)):
      
 passwd = get_passwd()
 
-
-print (passwd, file=open("contraseña.txt", "a"))
+print(f'The password are: {passwd}')
